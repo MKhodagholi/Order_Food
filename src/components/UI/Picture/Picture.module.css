@@ -1,0 +1,9 @@
+.picture {
+  background-image: url("./table-with-food-5.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 175px;
+  width: 100%;
+  z-index: -1;
+}
