@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Order.css";
-import Button from "../Button/Button";
+import Button from "../../Button/Button";
 
 const Order = () => {
   return (
