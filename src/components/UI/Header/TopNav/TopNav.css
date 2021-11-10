@@ -1,18 +1,29 @@
 .top-nav {
   display: flex;
-  flex-direction: row;
-  background-color: #8d120a;
-  padding: 0 1rem;
-  color: white;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-content: center;
+  background-color: #8d120a;
+  padding: 1rem 0;
+  color: white;
 }
 
 .top-nav h2 {
   flex-basis: 30%;
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
 }
 
-.top-nav Order {
-  align-self: flex-end;
+@media (min-width: 768px) {
+  .top-nav {
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+  .top-nav .order {
+    text-align: right;
+  }
+
+  .top-nav h2 {
+    text-align: center;
+  }
 }
