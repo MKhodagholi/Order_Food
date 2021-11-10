@@ -1,0 +1,29 @@
+.meal-item__sold {
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-item__sold input {
+  width: 40px;
+}
+
+.meal-item__sold button {
+  width: 130px;
+  height: 30px;
+}
+
+.meal-item__count {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.meal-item__count label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.meal-item__count input {
+  border: 1px solid #cccccc80;
+  border-radius: 5px;
+}
