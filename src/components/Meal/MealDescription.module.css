@@ -1,0 +1,18 @@
+.meal-item__description > * {
+  margin-bottom: 8px;
+}
+
+.meal-item__title {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.meal-item__text {
+  color: #524747;
+}
+
+.meal-item__amount {
+  color: rgb(177, 122, 19);
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
