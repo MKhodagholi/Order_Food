@@ -3,3 +3,11 @@
   margin: 40px auto;
   padding: 2rem;
 }
+
+.meal-item {
+  padding: 0.2rem 0;
+}
+
+.meal-item hr {
+  border: 1px solid #cccccc80;
+}
