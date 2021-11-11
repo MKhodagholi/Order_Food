@@ -1,13 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import MealDescription from "./MealDescription";
 import MealSold from "./MealSold";
-import Button from "../UI/Button/Button";
 import classes from "./MealItem.module.css";
 
 const MealItem = (props) => {
   return (
-    <div className={classes["meal-item"]}>
+    <Fragment>
       <div className={classes["meal-item__content"]}>
         <MealDescription
           title={props.title}
@@ -16,8 +15,7 @@ const MealItem = (props) => {
         />
         <MealSold />
       </div>
-      <hr />
-    </div>
+    </Fragment>
   );
 };
 

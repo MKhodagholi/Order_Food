@@ -3,7 +3,3 @@
   flex-direction: row;
   justify-content: space-between;
 }
-
-.meal-item hr {
-  border: 1px solid #cccccc80;
-}
