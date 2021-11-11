@@ -1,0 +1,70 @@
+.meal-order-list {
+  width: 28rem;
+  min-width: 20rem;
+  margin: auto;
+  padding: 1rem;
+}
+
+.meal-order-list hr {
+  border: 1px solid #700528;
+}
+
+.total-amount {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.meal-order__btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.meal-order__btn .btn1,
+.meal-order__btn .btn2 {
+  background-color: white;
+  color: #700528;
+  border: 1px solid #700528;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.meal-order__btn .btn1:hover {
+  background-color: #700528;
+  color: white;
+}
+
+.meal-order__btn .btn2 {
+  margin-left: 20px;
+  background-color: #700528;
+  color: white;
+}
+
+.meal-order__btn .btn2:hover {
+  background-color: #5a0521;
+}
+
+.meal-order__btn .btn1:focus,
+.meal-order__btn .btn2:focus {
+  outline: none;
+  animation: focusButton 0.2s ease-in-out;
+}
+
+@keyframes focusButton {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, 2px);
+  }
+}
+
+@media (min-width: 768px) {
+  .meal-order-list {
+    width: 35rem;
+  }
+}
