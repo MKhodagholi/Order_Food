@@ -6,6 +6,7 @@
   cursor: pointer;
   font-size: 1.15rem;
   border-radius: 30px;
+  user-select: none;
 }
 
 .btn:hover {
