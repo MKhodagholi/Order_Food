@@ -6,7 +6,9 @@ import "./TopNav.css";
 const TopNav = () => {
   return (
     <div className="top-nav">
-      <h2>ReactMeals</h2>
+      <h2>
+        <a href="#">ReactMeals</a>
+      </h2>
       <Order />
     </div>
   );

@@ -5,13 +5,17 @@
   align-content: center;
   background-color: #8d120a;
   padding: 1rem 0;
-  color: white;
 }
 
 .top-nav h2 {
   flex-basis: 20%;
   text-align: left;
   font-size: 2rem;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: white;
 }
 
 @media (min-width: 768px) {
