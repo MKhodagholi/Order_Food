@@ -3,9 +3,9 @@ import React from "react";
 import "./Order.css";
 import Button from "../../Button/Button";
 
-const Order = () => {
+const Order = (props) => {
   return (
-    <Button className="order">
+    <Button className="order" onClick={props.onClick}>
       <div className="icon">
         <i className="fa fa-shopping-cart"></i>
       </div>

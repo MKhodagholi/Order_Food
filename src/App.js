@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
+import MealContext from "./context/MealContext";
 import TopNav from "./components/UI/Header/TopNav/TopNav";
 import MealSummary from "./components/Meal/MealSummary";
 import Picture from "./components/UI/Picture/Picture";
@@ -7,6 +8,7 @@ import MealList from "./components/Meal/MealList";
 import MealOrderList from "./components/Meal/MealOrderList";
 
 const App = () => {
+  const [mealOrders, setMealOrders] = useState([]);
   const mealList = [
     {
       title: "Sushi",
@@ -34,22 +36,46 @@ const App = () => {
     },
   ];
 
-  const mealOrders = [
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  };
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  };
+
+  const addMealHandler = (id, count) => {
+    const meal = mealList.find((meal) => meal.id === id);
+    const mealOrderItem = { ...meal, count };
+    console.log(mealOrderItem);
+  };
+
+  const mealOrderList = [
+    ...mealOrders,
     {
       title: "Sushi",
-      amount: 18.99,
       count: 3,
+      amount: 22.99,
       id: Math.random().toString(),
     },
   ];
   return (
-    <div>
-      {/* <MealOrderList mealOrders={mealOrders} /> */}
-      <TopNav />
-      <Picture />
-      <MealSummary />
-      <MealList meals={mealList} />
-    </div>
+    <MealContext.Provider value={{ addMeal: addMealHandler }}>
+      <div>
+        {cartIsShown && (
+          <MealOrderList
+            mealOrders={mealOrderList}
+            onHideCart={hideCartHandler}
+          />
+        )}
+        <TopNav onShowCart={showCartHandler} />
+        <Picture />
+        <MealSummary />
+        <MealList meals={mealList} />
+      </div>
+    </MealContext.Provider>
   );
 };
 
