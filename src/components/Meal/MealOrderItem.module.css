@@ -1,0 +1,52 @@
+.meal-order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-order-item__content {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+}
+
+.meal-order-item__num {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  border: 1px solid #cccccc80;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  color: #333;
+}
+
+.amount {
+  color: #700528;
+  font-weight: bold;
+}
+
+.meal-order-item__btn {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100px;
+  justify-content: space-between;
+}
+
+.meal-order-item__btn button {
+  color: #700528;
+  background-color: white;
+  border: 1px solid #700528;
+  padding: 0.1rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.meal-order-item__btn button:hover {
+  color: white;
+  background-color: #700528;
+}
