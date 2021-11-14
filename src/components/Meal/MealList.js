@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import MealItem from "./Mealtem";
 import Card from "../UI/Card/Card";
 import classes from "./MealList.module.css";
+import CartContext from "../../context/Cart-Context";
 
 const MealList = (props) => {
+  const meals = [
+    {
+      title: "Sushi",
+      text: "Finest fish and veggies",
+      amount: 22.99,
+      id: Math.random().toString(),
+    },
+    {
+      title: "schnitzel",
+      text: "A german specialty",
+      amount: 16.5,
+      id: Math.random().toString(),
+    },
+    {
+      title: "Barbecue Burger",
+      text: "American, raw, meaty",
+      amount: 12.99,
+      id: Math.random().toString(),
+    },
+    {
+      title: "Green Bowl",
+      text: "Healthy...and green...",
+      amount: 18.99,
+      id: Math.random().toString(),
+    },
+  ];
+  const context = useContext(CartContext);
   return (
     <Card className={classes["meal-list"]}>
-      {props.meals.map((meal) => (
+      {meals.map((meal) => (
         <div className={classes["meal-item"]} key={meal.id}>
           <MealItem
             key={meal.id}
@@ -15,6 +43,7 @@ const MealList = (props) => {
             text={meal.text}
             id={meal.id}
             amount={meal.amount}
+            addItemHandler={context.addItem}
           />
           <hr />
         </div>
