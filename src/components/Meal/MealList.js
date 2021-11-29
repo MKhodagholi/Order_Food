@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import MealItem from "./Mealtem";
 import Card from "../UI/Card/Card";
 import classes from "./MealList.module.css";
 import CartContext from "../../context/Cart-Context";
+import useHttp from "../../hooks/use-http";
 
 const MealList = (props) => {
   const meals = [
@@ -32,6 +33,24 @@ const MealList = (props) => {
       id: Math.random().toString(),
     },
   ];
+  /*   const [meals, setMeals] = useState([]);
+  const { isLoading, error, sendRequest: fetchMeals } = useHttp();
+  useEffect(() => {
+    const transformMeals = (objMeal) => {
+      const loadedMeals = [];
+      for (const mealKey in objMeal) {
+        loadedMeals.push({
+          id: mealKey,
+          title: objMeal.title,
+          text: objMeal.text,
+          amount: objMeal.amount,
+        });
+      }
+      setMeals(loadedMeals);
+    };
+    fetchMeals({ url: "url" }, transformMeals);
+  }, []); */
+
   const context = useContext(CartContext);
   return (
     <Card className={classes["meal-list"]}>
