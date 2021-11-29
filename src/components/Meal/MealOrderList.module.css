@@ -3,6 +3,8 @@
   min-width: 20rem;
   margin: auto;
   padding: 1rem;
+  max-height: 400px;
+  overflow: scroll;
 }
 
 .meal-order-list hr {
