@@ -31,6 +31,9 @@ const cartReducer = (state, action) => {
       const updatedTotalAmountForRemove =
         state.totalAmount - action.item.amount * action.item.count;
       return { items, totalAmount: updatedTotalAmountForRemove };
+
+    case "REMOVE_ALL":
+      return { items: [], totalAmount: 0 };
   }
 };
 
@@ -46,6 +49,10 @@ const CartProvider = (props) => {
     dispatchCart({ type: "REMOVE", item });
   };
 
+  const removeAllItemFromCartHandler = () => {
+    dispatchCart({ type: "REMOVE_ALL" });
+  };
+
   const [cartState, dispatchCart] = useReducer(
     cartReducer,
     defaultCartReducer()
@@ -56,6 +63,7 @@ const CartProvider = (props) => {
     totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
+    removeAllItem: removeAllItemFromCartHandler,
   };
   return (
     <CartContext.Provider value={cartContext}>
